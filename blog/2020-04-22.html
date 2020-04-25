@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html lang = "en-US">
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146343266-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-146343266-1');
+  </script>
+  <!-- Icon source -->
+  <script src="https://use.fontawesome.com/83490c7177.js"></script>
+  <!-- Adobe fonts -->
+  <script>
+    (function(d) {
+      var config = {
+        kitId: 'uas0hre',
+        scriptTimeout: 3000,
+        async: true
+      },
+      h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+    })(document);
+  </script>
+  <!-- Metadata -->
+  <title>Edward Chang | Design choices for the static SUSA website</title>
+  <meta name = "description" content="A short description on my the SUSA website is static currently and the design choices that went into creating it.">
+  <meta name="date" content="2020-01-01" scheme="YYYY-MM-DD">
+  <meta name="robots" content="noindex, nofollow">
+  <meta rel="canonical" href="http://edwardfuhuachang.com">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta charset = "UTF-8" />
+  <link rel="stylesheet" type="text/css" href="/main.css">
+  <link rel="stylesheet" type="text/css" href="/blog-entries.css">
+  <link rel="icon" href="/assets/img/favicon.png">
+</head>
+<body>
+  <script>
+    document.body.className = 'fade';
+  </script>
+  <nav class="navbar-container">
+      <div id = "navbar">
+    <a href="/blog" title = 'Return to Blog Index' id="name"> Edward Chang </a>
+    <div class= "navlink" >
+      <ul>
+        <li>
+          <a href="https://github.com/equilnite" target="_blank" title = "GitHub" id ="github">
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/edwardchang116/" target="_blank" title = "LinkedIn" id = "LinkedIn">
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:edwardchang116@berkeley.edu" title = "Send an email to me!" id ="email">
+            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+          </div>
+  </nav>
+  <div class="main-container">
+      <div class = "main">
+    <span style="vertical-align: middle;" id="article">
+      <h1 style = "padding:.5em; padding-top:0; padding-bottom:0" id = 'title'> Design choices for the static SUSA website </h1>
+      <hr noshade>
+      <div id = text>
+          <p>
+              The SUSA website, in all honestly is pretty much my first ever full blown out website project. In contrast to this website, it has way more features that are integrated/planned. You might notice that the navigation bar for this website is sort of broken (currently because I'm too lazy to fix it). On the other hand, the navigation bar for the SUSA website is pretty much perfect. 
+          </p>
+          <h2>General Design Choices</h2>
+          <p>
+              Fundamentally, I imagined the SUSA website to be different from this personal website of mine. This website is limited to the screen of the device, however the SUSA website is designed so that "blocks" of the page are shown fullscreen and overflow is enabled to scroll through the body of the website. The overflow on this website, is enabled only within containers but this seems to be counter to the "accessibility" mission of SUSA, so I had the entire body scroll instead. And in addition to that accessibility mission, I also added a footer (which is neccessary anyways for OCF hosting recognition) that has a site map and other various links to help redirect users. One big thing that I had to remove from the website to give a static release is a fullcalendar presentation of our public facing SUSA Google Calendar. The API can't be released on GitHub, so I had to unfortunately remove it. One other thing is that I am planning to create a login system for all members, so that materials are secured within SUSA (but obviously it won't prevent <b>all</b> spread of our materials).
+          </p>
+          <p>
+              You may have also noticed that I avoided the use of Bootstrap or similar libraries. That's because I simply don't want to spend the time to learn them and I am already used to styling by scratch. Anyways, it isn't neccessary to even use those, since there plenty of open-source JavaScript functions on stack-overflow or repositories that can achieve the aesthetic that you want for the website. For example, the landing page of the website used a pure JS version of a jQuery plugin. By also limiting myself to things that browsers themselves can render from just the data that they're sent, I believe that the responsiveness of the website is increased a lot as opposed to if I were to try to learn jQuery/Bootstrap and caused loading issues that make the website unresponsive (some organizations' websites on campus suffer from this).
+          </p>
+          <p>
+              Making that website with the idea of blocks also made me realize the importance of relative positioning. Since I didn't really need relative positioning on this website, I sort of underestimated using it as opposed to absolute positioning. I then realized that I <b>had</b> to use it in order for my repositioning to work outwell.
+          </p>
+          <h2>Inspirations</h2>
+          <p>
+              I am not that of a creative person, so I drew a lot of the ideas I had for the website from other organizations on campus (I <b>didn't</b> copy code). I thought that a landing element or something similar would look good (took me a long time to find out that fittext existed though), so I added it a long with a link to the id that scrolls to the rest of the content on the page.
+          </p>
+          <p>
+              After looking through many pages, I personally prefered for pages to also not have <b>too many</b> features, so I wanted something that was a bit more minimalistic but also included some nice features. That's why there isn't any fancy transitions or photo albums (will likely include some slideshows of photos of events/group photos, but nothing that would make the website non-responsive at any time of the loading). 
+          </p>
+          <p>
+              On the team page, there are summary segments for each officer's bio, and that's something that I took from R. R is widely used in our statistics classes, so I decided to mimic a console output to give "summary statistics" of each person (even though the format isn't completely correct).
+          </p>
+          <h2>Conclusion</h2>
+          <p>
+              Overall, I learned a lot about HTML/CSS interactions when making the SUSA website, and applied those learnings to this website. I actually remade all css files for this website and altered the structure of the my html files after I finished the SUSA website. From the team page and the footer, I also learned how to use flex display so that the bios/contents reposition nicely from window resizing.
+          </p>
+        <h6 style = "padding-left: 4em;" id = 'timestamp'> 2020/04/22 &mdash; By Edward Chang</h6>
+      </div>
+    </span>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function(e) {
+      document.body.className = '';
+    });
+  </script>
+</body>
+</html>

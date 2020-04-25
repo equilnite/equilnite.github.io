@@ -1,0 +1,217 @@
+body, html {
+    height: 100%;
+    color: white;
+    font-size: 1.25em;
+    font-family: gopher, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    min-width: 550px;
+    background: url(/assets/img/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: block;
+}
+
+* {
+    position: relative;
+}
+
+* a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+* a:hover {
+    color: cornflowerblue;
+}
+
+hr {
+  width: 90%;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background-color: #333;
+  color: #333;
+
+}
+
+.navbar-container {
+    letter-spacing: .2em;
+    width: 100%;
+    height: 1.6em;
+    font-size: 1.25em;
+    background-color: #333;
+    padding-top: .2em;
+}
+
+#name {
+    font-style: bold;
+    font-weight: 700;
+}
+
+#navbar {
+    width: 80%;
+    left:50%;
+    margin-left: calc(-80% / 2);
+}
+
+.navlink {
+    top: -2.4em;
+    font-size: .75em;
+}
+
+.navlink li {
+    float: right;
+    list-style: none;
+    display: inline-block;
+    margin: 0 0.5em;
+}
+
+.main-container {
+    padding-top: 1.4em;
+    width: 100%;
+}
+
+.main {
+    width: 60%;
+    left: 50%;
+    margin-left: calc(-30% - (4em - 8px) / 2);
+    max-height: calc(60vh - 1em);
+    overflow: auto;
+    padding-right: calc(2em - 8px);
+    padding-left: 2em;
+}
+
+#text {
+    padding: 2em;
+}
+
+#text:hover {
+    background-color: rgb(0,0,0, 0.3);
+    border-radius: 1em;
+}
+
+
+#links-container {
+    width: 100%;
+}
+
+.links {
+    max-width: 90%;
+    left: 50%;
+    margin-left: calc(-90% / 2);
+    padding-left: 0;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.links li {
+    display : inline-block;
+    margin: 0em 1em 1em 1em;
+}
+
+.links a {
+    color: #333;
+}
+
+.links a:hover {
+    color: cornflowerblue;
+}
+
+.pic_desc {
+    position: absolute;
+    color: #333;
+    bottom:0;
+    width: 100%;
+    font-size: .7em;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+#desc {
+    margin-top: .25em;
+    margin-bottom: .25em;
+    margin-left: 1em;
+}
+
+.pic_desc a {
+    color: #333;
+}
+
+/* Fade in fade out
+NOTE: Gives Adobe fonts some time to load in
+*/
+
+body {
+  opacity: 1;
+  transition: 1s opacity;
+}
+
+body.fade {
+    opacity: 0;
+    transition: none;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 650px) {
+  .main {
+    font-size: .75em;
+  }
+  .pic_desc {
+    display: none;
+  }
+  .collapse {
+    display: none;
+  }
+
+
+}
+
+/*overflow scrollbar*/
+.links::-webkit-scrollbar {
+background: none;
+width: 8px;
+}
+.links::-webkit-scrollbar-track {
+
+background: rgba(0, 0, 0, 0.0);
+}
+.links::-webkit-scrollbar-thumb {
+background: rgba(0, 0, 0, 0.5);
+}
+.links::-webkit-scrollbar-thumb:hover {
+background: #fff;
+}
+
+#text::-webkit-scrollbar {
+background: none;
+width: 8px;
+}
+#text::-webkit-scrollbar-track {
+
+background: rgba(0, 0, 0, 0.0);
+}
+#text::-webkit-scrollbar-thumb {
+background: rgba(255, 255, 255, 0.7);
+}
+#text::-webkit-scrollbar-thumb:hover {
+background: #fff;
+}
+::-webkit-scrollbar{
+background: #fff;
+}
+::-webkit-scrollbar-track {
+background: none;
+}
+::-webkit-scrollbar-thumb {
+background: rgba(000, 000, 000, 0.7);
+}
+::-webkit-scrollbar-thumb:hover {
+background: #222;
+}
