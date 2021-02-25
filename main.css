@@ -57,9 +57,28 @@ h1, h2, h3, h4, h5 {
 
 .main-container {
     padding-top: 3em;
+    padding-bottom: 3em;
     min-width: 100%;
     min-height: calc(100vh);
     background: white;
+    line-height: 2em;
+}
+
+.main-container h1, h2, h3, h4, h5 {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+
+}
+
+.main-container h1::after, h2::after, h3::after, h4::after, h5::after{
+    content: "";
+    position: absolute;
+    bottom: -.5em;
+    left: 50%;
+    border-bottom: 2px rgb(106,90,205,.7) solid;
+    width: 20em;
+    transform: translate(-10em, 0)
 }
 
 .main {
@@ -71,7 +90,7 @@ h1, h2, h3, h4, h5 {
     width: 100%;
     position: absolute;
     bottom: 0;
-    background-color: rgb(250, 235, 215, 0.7);
+    background-color: rgb(255, 255, 255, 0.7);
     transition: .5s;
 }
 
@@ -104,7 +123,7 @@ h1, h2, h3, h4, h5 {
     width: 22em;
     margin: .5em;
     border-width: 3px;
-    border-color: rgb(106,90,205,1);
+    border-color: cornflowerblue;
 }
 
 .project-item p {
@@ -112,6 +131,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .project-item .project-tit {
+    font-family: 'Raleway';
+    z-index: 2;
     position: absolute;
     top: 0;
     width: calc(100% - 1.25em);
@@ -125,17 +146,24 @@ h1, h2, h3, h4, h5 {
 }
 
 .project-item .project-desc {
+    color: white;
+    font-style: italic;
+    z-index: 1;
     font-size: .8em;
     width: calc(100% - .75em);
     position: absolute;
     bottom: 0;
-    background-color: rgb(250, 235, 215, 0.7);
+    background-color: rgb(100, 149, 237, 0.7);
     margin-bottom: 0;
     padding: .25em;
     padding-left: .5em;
+    line-height: 1.5em;
 }
 
 .project-item img {
+    z-index: 0;
+    object-fit: cover;
+    height: 100%;
     width: 100%;
 }
 
@@ -185,22 +213,35 @@ h1, h2, h3, h4, h5 {
     margin-top: 3em;
 }
 
-.fab, .far {
+.fab, .far, .fas {
     font-size: 2em;
+}
+
+p>.fab, p>.far, p>.fas {
+    padding: .5em;
+    transform: translate(0, .175em);
 }
 
 
 * a i {
     text-decoration: none;
-    color: rgb(106,90,205);
+    color: rgb(106,90,205,.7);
     transition: .5s;
 }
 
 * a i:hover {
-    color: black;
+    color: cornflowerblue;
 }
 
 p {
     margin-left: 2.5em;
     margin-right: 2.5em;
+}
+
+li:not(:last-child) {
+    margin-bottom: 1em;
+}
+
+.terms {
+    margin-left: 2em;
 }
