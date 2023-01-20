@@ -61,14 +61,14 @@ p {
     line-height: 2em;
 }
 
-.main-container h1, h2, h3, h4, h5 {
+.main-container h1, h2 {
     text-align: center;
     margin-top: 2em;
     margin-bottom: 1.5em;
 
 }
 
-.main-container h1::after, h2::after, h3::after, h4::after, h5::after{
+.main-container h1::after, h2::after{
     content: "";
     position: absolute;
     bottom: -.5em;
