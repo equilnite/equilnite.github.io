@@ -74,8 +74,8 @@ p {
     bottom: -.5em;
     left: 50%;
     border-bottom: 2px rgb(106,90,205,.7) solid;
-    width: 20em;
-    transform: translate(-10em, 0)
+    width: 10em;
+    transform: translate(-5em, 0)
 }
 
 .main {
@@ -84,7 +84,7 @@ p {
 }
 
 #desc-container {
-    width: 100%;
+    min-width: 100%;
     position: fixed;
     bottom: 0;
     background-color: rgb(0, 0, 0, 0.7);
