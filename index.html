@@ -1,15 +1,15 @@
 <!DOCTYPE HTML>
-<html lang = "en-US">
+<html lang="en-US">
+
 <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146343266-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-146343266-1');
-    </script>
-    <!-- Icon source -->
+    <!-- Bootstrap-->
+    <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Masonry Plugin for Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"
+        integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous"
+        async></script>
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/89712f2394.js" crossorigin="anonymous"></script>
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -18,191 +18,440 @@
     <!-- fancy aesthetic scripts -->
     <script src="/assets/vendored/typewrite.js"></script>
     <script src="/assets/vendored/fittext.js"></script>
+    <!-- More Styling -->
+    <link rel="stylesheet" type="text/css" href="/bootstrap/override.css">
+    <link rel="stylesheet" type="text/css" href="/styling/main.css">
+    <link rel="stylesheet" type="text/css" href="/styling/animation.css">
+
     <!-- Metadata -->
     <title>Edward Chang</title>
-    <meta name = "description" content="I'm a UC Berkeley alumni with a BA in statistics with a teaching emphasis and a minor in science and math education. Currently teaching AP Statistics and AP Computer Science Principles at Berkeley High School in Berkeley, CA.">
-    <meta name="robots" content="noarchive">
-    <meta rel="canonical" href="http://edwardfuhuachang.com">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <meta charset = "UTF-8" />
-    <link rel="stylesheet" type="text/css" href="main.css">
-    <link rel="stylesheet" type="text/css" href="animation.css">
     <link rel="icon" href="/assets/img/favicon.png">
+    <meta charset="UTF-8" />
+    <meta name="description"
+        content="I'm a UC Berkeley alumni with a BA in statistics with a teaching emphasis and a minor in science and math education. Currently teaching AP Statistics and AP Computer Science Principles at Berkeley High School in Berkeley, CA.">
+    <meta rel="canonical" href="https://echa.ng">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
-    <div id = "landing-container">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1366.25 769.55" x="0px" y="0px" id = "curve" xml:space="preserve" preserveAspectRatio="xMidYMid slice"><defs><style>.a, .b{fill:none;stroke:rgb(255, 255, 255, .7);stroke-miterlimit:10;stroke-width:.2em;stroke-linecap:"round";} .c{stroke:rgb(106,90,205,.7)}</style></defs><path class="a" d="M0,768S1.5,638.5,241.5,656.5s538-318,322-175,125,18,226-76,334-157,265-80c-16.84,18.79-25.4,24.9-28.46,22.95-7.89-5,21.53-67.62,47.46-111.95,25.71-43.94,129.56-221.45,292-237" transform="translate(0.5 1)"/><path class="a c" d="M.5,768.5s-12-108.92,228-90.92,538-318,322-175,125,18,226-76,334-157,265-80c-16.84,18.79-25.4,24.9-28.46,23-7.89-5,21.53-67.63,47.46-112,25.71-43.94,158-195.08,305-258.08" transform="translate(0.5 1)"/><path class="b" d="M1119.5,243.5c44-67,150-190,246-244" transform="translate(0.5 1)"/><path class="b" d="M642.2,534.48c47.17-24.21,92.68-52.21,120.28-77.9,54.31-50.55,146.8-92.13,210-107.8" transform="translate(0.5 1)"/><path class="b" d="M.5,768.5s-1-72,214-60.92c88.26,4.56,184.09-34.51,259.54-82.13" transform="translate(0.5 1)"/><path class="b c" d="M1069.5,188.5c29-74,148-189,296-189" transform="translate(0.5 1)"/><path class="b c" d="M669.2,452.48c47.17-24.21,92.68-52.21,120.28-77.9,54.31-50.55,146.8-92.13,210-107.8" transform="translate(0.5 1)"/><path class="b c" d="M.5,768.5s1-160.92,241-142.92c49.31,3.7,101.07-7.54,150.31-26.51" transform="translate(0.5 1)"/></svg>
-        <div id = "landing">
-            <h1 id="landing-name">MR. CHANG | <br> <span id = "roles"></span></h1>
+    <div class="container-fluid vh-100" id="landing-container">
+        <svg class="vh-100" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1366.25 769.55" x="0px" y="0px" id="curve"
+            xml:space="preserve" preserveaspectratio="xMidYMid slice" style="left: 0;">
+            <defs>
+                <style>
+                    .a,
+                    .b {
+                        fill: none;
+                        stroke: rgb(255, 255, 255, 0.7);
+                        stroke-miterlimit: 10;
+                        stroke-width: 0.2em;
+                        stroke-linecap: "round";
+                    }
+
+                    .c {
+                        stroke: rgb(106, 90, 205, 0.7)
+                    }
+                </style>
+            </defs>
+            <path class="a"
+                d="M0,768S1.5,638.5,241.5,656.5s538-318,322-175,125,18,226-76,334-157,265-80c-16.84,18.79-25.4,24.9-28.46,22.95-7.89-5,21.53-67.62,47.46-111.95,25.71-43.94,129.56-221.45,292-237"
+                transform="translate(0.5 1)" />
+            <path class="a c"
+                d="M.5,768.5s-12-108.92,228-90.92,538-318,322-175,125,18,226-76,334-157,265-80c-16.84,18.79-25.4,24.9-28.46,23-7.89-5,21.53-67.63,47.46-112,25.71-43.94,158-195.08,305-258.08"
+                transform="translate(0.5 1)" />
+            <path class="b" d="M1119.5,243.5c44-67,150-190,246-244" transform="translate(0.5 1)" />
+            <path class="b" d="M642.2,534.48c47.17-24.21,92.68-52.21,120.28-77.9,54.31-50.55,146.8-92.13,210-107.8"
+                transform="translate(0.5 1)" />
+            <path class="b" d="M.5,768.5s-1-72,214-60.92c88.26,4.56,184.09-34.51,259.54-82.13"
+                transform="translate(0.5 1)" />
+            <path class="b c" d="M1069.5,188.5c29-74,148-189,296-189" transform="translate(0.5 1)" />
+            <path class="b c" d="M669.2,452.48c47.17-24.21,92.68-52.21,120.28-77.9,54.31-50.55,146.8-92.13,210-107.8"
+                transform="translate(0.5 1)" />
+            <path class="b c" d="M.5,768.5s1-160.92,241-142.92c49.31,3.7,101.07-7.54,150.31-26.51"
+                transform="translate(0.5 1)" />
+        </svg>
+        <div class="container" id="landing">
+            <h1 id="landing-name">MR. CHANG |
+                <br>
+                <span id="roles"></span>
+            </h1>
             <script type="text/javascript">
                 const instance = new Typewriter('#roles', {
-                    strings: ['Teaching', 'Statistics', 'Data Science'],
+                    strings: [
+                        'Teaching', 'Statistics', 'Data Science'
+                    ],
                     autoStart: true,
                     loop: true
                 });
             </script>
         </div>
     </div>
-    <div class = "main-container">
-        <div class = "main">
-            <div id="text">
 
-                <h2> About Me </h2>
+    <div class="container my-5">
 
-                <p>
-                    I'm a UC Berkeley alumni with a BA in statistics with a teaching emphasis and a minor in science and math education. Currently teaching AP Statistics and AP Computer Science Principles at Berkeley High School in Berkeley, CA.
-                </p>
-
-                <div class = "array" id = "links">
-                    <div class = "icon-item">
-                        <a href="https://www.linkedin.com/in/edwardchang116/"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <div class = "icon-item">
-                        <a href="email:edwardchang@berkeley.net"><i class="far fa-envelope"></i></a>
-                    </div>
+        <!-- About Me -->
+        <div>
+            <h2 class="text-center pt-5">About Me</h2>
+            <hr class="border border-primary border-2 opacity-75 divider mx-auto">
+            <p>
+                I'm a UC Berkeley alumni with a BA in statistics with a teaching emphasis and a minor in science and
+                math education. Currently teaching AP Statistics and AP Computer Science Principles at Berkeley High
+                School in Berkeley, CA.
+            </p>
+            <div class="row row-cols-auto justify-content-center align-items-center gx-5">
+                <div class="col">
+                    <a href="https://www.linkedin.com/in/edwardchang116/">
+                        <i class="fab fa-linkedin-in  link-primary"></i>
+                    </a>
                 </div>
-
-                <h2> Teaching </h2>
-
-                <h3> AP Statistics </h3>
-
-                <ul>
-                    <li>
-                        <a href="https://stats.echa.ng"> Here's a link to my notes which includes a digitized formula sheet for the AP Exam. </a>
-                    </li>
-                </ul>
-                
-                <h2> Projects </h2>
-
-                <p style = "text-align: center"> <a href="edwardchang@berkeley.net"> Contact</a> to recieve more information on undisclosed project material. </p>
-
-                <div class = "array">
-                    <div class = "project-cont">
-                        <div class = "project-item" 
-                        onclick = "window.open('/projects/10billionforecast.pdf', '_blank');"
-                        style="background-image: url(/assets/img/project-prev/pop-forecast.svg);">
-                            <p class = "project-tit"> World Population Estimation </p>
-                            <p class = "project-desc"> Estimating when the world population will reach 10 billion using various forecasting techniques. </p>
-                        </div>
-                    </div>
-                    <div class = "project-cont">
-                        <div class = "project-item" 
-                        onclick = "window.open('/projects/ChangEdwardHealthDisparity.png', '_blank');"
-                        style="background-image: url(/assets/img/project-prev/healthdisparity.png);">
-                            <p class = "project-tit"> Health Disparity Research </p>
-                            <p class = "project-desc"> Data analysis on a health survey for Cal Teach SRI. </p>
-                        </div>
-                    </div>
-                    <div class = "project-cont">
-                        <div class = "project-item" 
-                        onclick = "window.open('https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html', '_blank');"
-                        style="background-image: url(/assets/img/project-prev/151a-book.jpg);">
-                            <p class = "project-tit"> Boston Housing Dataset Analysis </p>
-                            <p class = "project-desc"> Data analysis for the Boston Housing dataset written with a group for the course Stat 151A @ Berkeley. </p>
-                        </div>
-                    </div>
-                    <div class = "project-cont">
-                        <div class = "project-item" 
-                        onclick = "window.open('https://susa.berkeley.edu/course-map', '_blank');"
-                        style="background-image: url(/assets/img/project-prev/course-map.png);">
-                            <p class = "project-tit"> Statistics Course Map </p>
-                            <p class = "project-desc"> Written in pure JavaScript to generate interactable svg elements.</p>
-                        </div>
-                    </div>
-                    <div class = "project-cont">
-                        <div class = "project-item" 
-                        onclick = "window.open('/projects/tvsyntaxfacilitationguide.pdf', '_blank');"
-                        style="background-image: url(/assets/img/project-prev/tvsc.png);">
-                            <p class = "project-tit"> tidyverse Syntax Activity </p>
-                            <p class = "project-desc"> An activity on introducing tidyverse syntax written for the course Educ 150 @ Berkeley. </p>
-                        </div>
-                    </div>
-                    <div class = "project-cont">
-                        <div class = "project-item" 
-                        onclick = "window.open('https://susa.berkeley.edu', '_blank');"
-                        style="background-image: url(/assets/img/project-prev/susa.png);">
-                            <p class = "project-tit"> SUSA Website </p>
-                            <p class = "project-desc"> Written with Python Flask and minimal vendored sources. </p>
-                        </div>
-                    </div>
-                    <div class = "project-cont">
-                        <div class = "project-item" 
-                        onclick = "window.open('https://inst.eecs.berkeley.edu/~cs61b/sp20/materials/proj/proj3/index.html', '_blank');"
-                        style="background-image: url(/assets/img/project-prev/git-icon.png);">
-                            <p class = "project-tit"> Gitlet </p>
-                            <p class = "project-desc"> A minimal implementation of Git in Java for the course CS 61B @ Berkeley. </p>
-                        </div>
-                    </div>
-                    <div class = "project-cont">
-                        <div class = "project-item" 
-                        onclick = "window.open('https://github.com/equilnite/wright-stuff-timer', '_blank');"
-                        style="background-image: url(/assets/img/project-prev/clock.png);">
-                            <p class = "project-tit"> Timer </p>
-                            <p class = "project-desc"> A timer in JavaScript made to streamline supervision of Wright Stuff for Science Olympiad </p>
-                        </div>
-                    </div>
-                    <div class = "project-cont">
-                        <div class = "project-item" 
-                        onclick = "window.open('https://inst.eecs.berkeley.edu/~cs61a/sp19/proj/scheme/', '_blank');"
-                        style="background-image: url(/assets/img/project-prev/lambda.png);">
-                            <p class = "project-tit"> Scheme Interpreter </p>
-                            <p class = "project-desc"> An interpreter for the LISP variant Scheme written in Python for the course CS 61A @ Berkeley. </p>
-                        </div>
-                    </div>
+                <div class="col">
+                    <a href="email:edwardchang@berkeley.net">
+                        <i class="far fa-envelope link-primary"></i>
+                    </a>
                 </div>
+            </div>
+        </div>
 
-                <h2> Experience </h2>
-
-                <ul style="list-style: none;">
-                    <li>Berkeley High School<br>
-                        <span class="terms">&#8212; Mathematics Teacher: 2022 - Present</span><br>
-                        <span class="terms">&#8212; Student Teacher: Spring 2022</span><br>
-                        <span class="terms">&#8212; Class Aide: Fall 2020, Fall 2021</span></li>
-                    
-                    <li>Stat 33B: Introduction to Advanced Programming in R <br>
-                        <span class="terms">&#8212; Head Teaching Assistant: Spring 2021, Fall 2021</span></li>
-
-                    <li>Stat 20: Introduction to Probability and Statistics <br>
-                        <span class="terms">&#8212; Group Tutor: Summer 2020, Fall 2020</span> <br>
-                        <span class="terms">&#8212; Reader: Fall 2019</span></li>
-
-                    <li>Berkeley Unboxing Data Science (BUDS)<br>
-                        <span class="terms">&#8212; Group Facilitator & Researcher: Summer 2021</span></li>
-
-                    <li>Martin Luther King Jr. Middle School<br>
-                        <span class="terms">&#8212; Class Aide: Spring 2021 </span> <br>
-                        <span class="terms">&#8212; Mathematics Mentor: Fall 2018 - Spring 2020, Spring 2022</span></li>
-
-                </ul>
-
-                <h2> Skills </h2>
-
-                <p style = "text-align: center"> <i class="fab fa-r-project"></i> R,
-                    <i class="fab fa-python"></i> Python,
-                    <i class="fab fa-html5"></i> HTML,
-                    <i class="fab fa-css3-alt"></i> CSS,
-                    <i class="fab fa-js-square"></i> JavaScript,
-                    <i class="fab fa-java"></i> Java,
-                    <i class="fas fa-database"></i> SQL </p>
-
+        <!-- Teaching materials -->
+        <div>
+            <h2 class="text-center pt-5">Teaching</h2>
+            <hr class="border border-primary border-2 opacity-75 divider mx-auto">
+            <div class="row justify-content-center g-5">
+                <div class="col-sm-12 col-lg-6">
+                    <h3 class="text-center pt-2">AP Statistics</h3>
+                    <ul>
+                        <li><a href="https://stats.echa.ng" class="link-primary">stats.echa.ng</a>
+                            &#8212; Homepage of the course, with the weekly agenda.
+                        </li>
+                        <li><a href="https://stats-notes.echa.ng" class="link-primary">stats-notes.echa.ng</a>
+                            &#8212; Digitized notes for the bulk of the AP Statistics curriculum.
+                        </li>
+                        <li>
+                            <a href="https://forecasting.echa.ng" class="link-primary">forecasting.echa.ng</a>
+                            &#8212; Digitized notes for the forecasting portion of the Post-AP class.
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-lg-6">
+                    <h3 class="text-center pt-2">
+                        AP Computer Science Principles
+                    </h3>
+                    <ul>
+                        <li>
+                            <a href="https://bjc.jacketcs.net" class="link-primary">bjc.jacketcs.net</a>
+                            &#8212; A customized BJC curriculum for BHS students.
+                        </li>
+                    </ul>
+                </div>
             </div>
 
+
+        </div>
+
+        <!-- Projects section, text only-->
+        <div id="projects-text" class="col justify-content-center">
+            <h2 class="text-center pt-5">Projects</h2>
+            <hr class="border border-primary border-2 opacity-75 divider mx-auto">
+            <p class="text-center"><a href="edwardchang@berkeley.net">Email me</a> or ask me in-person if anything
+                interests you!
+            </p>
+        </div>
+
+        <!-- Projects -->
+        <div class="row row-cols-auto g-5 pt-3" data-masonry='{"percentPosition": true }' id="projects">
+            <div class="col-sm-6 col-lg-4">
+                <div class="card text-end">
+                    <img class="card-img-top" src="/assets/img/project-prev/pop-forecast.svg"
+                        alt="The global population trendline">
+                    <div class="card-body">
+                        <h4 class="card-title ">World Population Estimation</h4>
+                        <h6 class="card-subtitle mb-2 text-body-secondary ">Statistics</h6>
+                        <p class="card-text text-start">
+                            Estimating when the world population will reach 10 billion using various forecasting
+                            techniques.
+                        </p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#work1">Preview</button>
+                    </div>
+                    <div class="card-footer text-muted ">
+                        Spring 2022
+                    </div>
+                </div>
+                <div class="modal fade" id="work1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <object type="application/pdf" data="/projects/10billionforecast.pdf" width="100%"
+                                    height="100%">
+                                    Not loading? <a type="button" class="btn btn-primary"
+                                        href="/projects/10billionforecast.pdf" target="_blank">Download</a></object>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="card text-end">
+                    <img class="card-img-top" src="/projects/healthdisparity.png"
+                        alt="A preview of the project poster made for this health disparity analysis.">
+                    <div class="card-body">
+                        <h4 class="card-title ">Health Disparity Research</h4>
+                        <h6 class="card-subtitle mb-2 text-body-secondary ">Data Science</h6>
+                        <p class="card-text text-start">
+                            Data analysis on a health survey for Cal Teach SRI.
+                        </p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#work2">Preview</button>
+                    </div>
+                    <div class="card-footer text-muted ">
+                        Summer 2021
+                    </div>
+                </div>
+                <div class="modal fade" id="work2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <object type="image/png" data="/projects/healthdisparity.png" width="100%" height="100%"
+                                    style="object-fit:contain">
+                                    Not loading? <a type="button" class="btn btn-primary"
+                                        href="/projects/healthdisparity.png" target="_blank">Download</a></object>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="card text-end">
+                    <div class="card-body">
+                        <h4 class="card-title ">Boston Housing Dataset Linear Modeling</h4>
+                        <h6 class="card-subtitle mb-2 text-body-secondary ">Statistics</h6>
+                        <p class="card-text text-start">
+                            Linear modeling with permutation-based inference for the <a
+                                href="https://www.cs.toronto.edu/~delve/data/boston/bostonDetail.html">Boston Housing
+                                dataset</a> written with a group for the course Stat 151A @ Berkeley.
+                        </p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#work3">Preview</button>
+                    </div>
+                    <div class="card-footer text-muted ">
+                        Spring 2021
+                    </div>
+                </div>
+                <div class="modal fade" id="work3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <object type="application/pdf" data="/projects/boston.pdf" width="100%" height="100%">
+                                    Not loading? <a type="button" class="btn btn-primary" href="/projects/boston.pdf"
+                                        target="_blank">Download</a></object>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="card text-end">
+                    <img class="card-img-top" src="/assets/img/project-prev/course-map.png"
+                        alt="A screenshot of the course map">
+                    <div class="card-body">
+                        <h4 class="card-title ">Statistics Course Map</h4>
+                        <h6 class="card-subtitle mb-2 text-body-secondary ">Website Development</h6>
+                        <p class="card-text text-start">
+                            A course map written in pure JavaScript to generate interactable svg elements.
+                        </p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#work4">Preview</button>
+                    </div>
+                    <div class="card-footer text-muted ">
+                        Fall 2020
+                    </div>
+                </div>
+                <div class="modal fade" id="work4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <iframe src="https://susa.berkeley.edu/course-map" width="100%" height="100%">
+                                    Not loading? <a type="button" class="btn btn-primary"
+                                        href="https://susa.berkeley.edu/course-map" target="_blank">Go to the
+                                        website</a></iframe>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="card text-end">
+                    <img class="card-img-top" src="/assets/img/project-prev/tvsc.png"
+                        alt="A screenshot of the Shiny app used in the activity">
+                    <div class="card-body">
+                        <h4 class="card-title ">tidyverse Syntax Activity</h4>
+                        <h6 class="card-subtitle mb-2 text-body-secondary ">Education</h6>
+                        <p class="card-text text-start">
+                            An activity on introducing tidyverse syntax written for the course Educ 150 @ Berkeley.
+                        </p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#work5">Preview</button>
+                    </div>
+                    <div class="card-footer text-muted ">
+                        Fall 2020
+                    </div>
+                </div>
+                <div class="modal fade" id="work5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <object type="application/pdf" data="/projects/tvsyntaxfacilitationguide.pdf"
+                                    width="100%" height="100%">
+                                    Not loading? <a type="button" class="btn btn-primary"
+                                        href="/projects/tvsyntaxfacilitationguide.pdf"
+                                        target="_blank">Download</a></object>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 ">
+                <div class="card text-end">
+                    <img class="card-img-top" src="/assets/img/project-prev/susa.png"
+                        alt="A screenshot the landing page of the SUSA website">
+                    <div class="card-body">
+                        <h4 class="card-title ">SUSA Website</h4>
+                        <h6 class="card-subtitle mb-2 text-body-secondary ">Website Development</h6>
+                        <p class="card-text text-start">
+                            A website made for the now unactive Statistics Undergraduate Student Association @ Cal.
+                            Written with Python Flask to dynamically serve the pages from a database.
+                        </p>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#work6">Preview</button>
+                    </div>
+                    <div class="card-footer text-muted ">
+                        Spring 2020
+                    </div>
+                </div>
+                <div class="modal fade" id="work6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-fullscreen">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <iframe src="https://susa.berkeley.edu" width="100%" height="100%">
+                                    Not loading? <a type="button" class="btn btn-primary"
+                                        href="https://susa.berkeley.edu" target="_blank">Go to the website</a></iframe>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 ">
+                <div class="card text-end">
+                    <div class="card-body">
+                        <h4 class="card-title ">Gitlet</h4>
+                        <h6 class="card-subtitle mb-2 text-body-secondary ">Computer Science</h6>
+                        <p class="card-text text-start">
+                            A minimal implementation of Git in Java for the course CS 61B @ Berkeley that followed the
+                            <a href="https://inst.eecs.berkeley.edu/~cs61b/sp20/materials/proj/proj3/index.html">specifications
+                                that was given.</a>
+                        </p>
+                        <button type="button" class="btn btn-primary disabled">No preview available</button>
+                    </div>
+                    <div class="card-footer text-muted ">
+                        Spring 2020
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="card text-end">
+                    <div class="card-body">
+                        <h4 class="card-title ">Wright Stuff Timer</h4>
+                        <h6 class="card-subtitle mb-2 text-body-secondary ">Program</h6>
+                        <p class="card-text text-start">
+                            A timer in JavaScript made to streamline supervision of Wright Stuff for Science Olympiad.
+                        </p>
+                        <a type="button" class="btn btn-primary" href="https://github.com/equilnite/wright-stuff-timer"
+                            target="_blank">See the code</a>
+                    </div>
+                    <div class="card-footer text-muted ">
+                        Fall 2019
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <div class="card text-end">
+                    <div class="card-body">
+                        <h4 class="card-title ">Scheme Interpreter</h4>
+                        <h6 class="card-subtitle mb-2 text-body-secondary ">Computer Science</h6>
+                        <p class="card-text text-start">
+                            An interpreter for the LISP variant Scheme written in Python for the course CS 61A @
+                            Berkeley that followed the <a
+                                href="https://inst.eecs.berkeley.edu/~cs61a/sp19/proj/scheme/">specifications that was
+                                given.</a>
+                        </p>
+                        <button type="button" class="btn btn-primary disabled">No preview available</button>
+                    </div>
+                    <div class="card-footer text-muted ">
+                        Spring 2019
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div id = "desc-container">
-        <p id = "desc"> One of my favorite views at Berkeley &mdash; on the stairs to Foothill </p>
+
+    <!-- Landing Footer -->
+    <div class="container-fluid sticky-bottom" id="desc">
+        One of my favorite views at Berkeley &mdash; on the stairs to Foothill
     </div>
+
+    <!-- Footer scroll disappear script-->
     <script>
-        window.onscroll = function() {
-          if (window.pageYOffset > 0) {
-            document.getElementById("desc-container").classList.add("invisible");
-          } else {
-            document.getElementById("desc-container").classList.remove("invisible");
-          }
+        window.onscroll = function () {
+            if (window.pageYOffset > 0) {
+                document.getElementById("desc").classList.add("fade");
+            } else {
+                document.getElementById("desc").classList.remove("fade");
+            }
         }
     </script>
+
 </body>
+
 </html>
